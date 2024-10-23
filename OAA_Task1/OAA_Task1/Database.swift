@@ -9,8 +9,12 @@ import Foundation
 
 //var record = Record(columns: <#[String : String]#>)
 
-class Database {
+public class Database {
     private var tables : [String : Record] = [:]
+    
+    func getTable(name: String) -> Record? {
+        return tables[name]
+    }
     
     func createTable(command: String) {
         let createTable = #"CREATE (\w+) \(([^)]+)\);"#

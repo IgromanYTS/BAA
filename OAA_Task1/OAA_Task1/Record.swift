@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Record {
+public struct Record {
     let name : String
     let columns: [String]
     var rows : [[String]] = []

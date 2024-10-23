@@ -10,6 +10,10 @@
 		CE9104092CC596F2003F9C99 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9104082CC596F2003F9C99 /* main.swift */; };
 		CE9104122CC633A5003F9C99 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9104112CC633A5003F9C99 /* Record.swift */; };
 		CE9104142CC633C6003F9C99 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9104132CC633C6003F9C99 /* Database.swift */; };
+		CE9104212CC83A6D003F9C99 /* MyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9104202CC83A6D003F9C99 /* MyTests.swift */; };
+		CE9104222CC8528E003F9C99 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9104082CC596F2003F9C99 /* main.swift */; };
+		CE9104232CC8528E003F9C99 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9104112CC633A5003F9C99 /* Record.swift */; };
+		CE9104242CC8528E003F9C99 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9104132CC633C6003F9C99 /* Database.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,10 +33,19 @@
 		CE9104082CC596F2003F9C99 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		CE9104112CC633A5003F9C99 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		CE9104132CC633C6003F9C99 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		CE9104192CC83A2D003F9C99 /* TestProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE9104202CC83A6D003F9C99 /* MyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		CE9104022CC596F2003F9C99 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE9104162CC83A2D003F9C99 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -46,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				CE9104072CC596F2003F9C99 /* OAA_Task1 */,
+				CE91041A2CC83A2D003F9C99 /* TestProjectTests */,
 				CE9104062CC596F2003F9C99 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				CE9104052CC596F2003F9C99 /* OAA_Task1 */,
+				CE9104192CC83A2D003F9C99 /* TestProjectTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,6 +81,14 @@
 				CE9104132CC633C6003F9C99 /* Database.swift */,
 			);
 			path = OAA_Task1;
+			sourceTree = "<group>";
+		};
+		CE91041A2CC83A2D003F9C99 /* TestProjectTests */ = {
+			isa = PBXGroup;
+			children = (
+				CE9104202CC83A6D003F9C99 /* MyTests.swift */,
+			);
+			path = TestProjectTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -88,6 +111,23 @@
 			productReference = CE9104052CC596F2003F9C99 /* OAA_Task1 */;
 			productType = "com.apple.product-type.tool";
 		};
+		CE9104182CC83A2D003F9C99 /* TestProjectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE91041D2CC83A2D003F9C99 /* Build configuration list for PBXNativeTarget "TestProjectTests" */;
+			buildPhases = (
+				CE9104152CC83A2D003F9C99 /* Sources */,
+				CE9104162CC83A2D003F9C99 /* Frameworks */,
+				CE9104172CC83A2D003F9C99 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TestProjectTests;
+			productName = TestProjectTests;
+			productReference = CE9104192CC83A2D003F9C99 /* TestProjectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -100,6 +140,10 @@
 				TargetAttributes = {
 					CE9104042CC596F2003F9C99 = {
 						CreatedOnToolsVersion = 15.4;
+					};
+					CE9104182CC83A2D003F9C99 = {
+						CreatedOnToolsVersion = 15.4;
+						LastSwiftMigration = 1540;
 					};
 				};
 			};
@@ -117,9 +161,20 @@
 			projectRoot = "";
 			targets = (
 				CE9104042CC596F2003F9C99 /* OAA_Task1 */,
+				CE9104182CC83A2D003F9C99 /* TestProjectTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE9104172CC83A2D003F9C99 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CE9104012CC596F2003F9C99 /* Sources */ = {
@@ -129,6 +184,17 @@
 				CE9104142CC633C6003F9C99 /* Database.swift in Sources */,
 				CE9104122CC633A5003F9C99 /* Record.swift in Sources */,
 				CE9104092CC596F2003F9C99 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE9104152CC83A2D003F9C99 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE9104222CC8528E003F9C99 /* main.swift in Sources */,
+				CE9104232CC8528E003F9C99 /* Record.swift in Sources */,
+				CE9104242CC8528E003F9C99 /* Database.swift in Sources */,
+				CE9104212CC83A6D003F9C99 /* MyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +337,37 @@
 			};
 			name = Release;
 		};
+		CE91041E2CC83A2D003F9C99 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yura-b.TestProjectTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		CE91041F2CC83A2D003F9C99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yura-b.TestProjectTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -288,6 +385,15 @@
 			buildConfigurations = (
 				CE91040D2CC596F2003F9C99 /* Debug */,
 				CE91040E2CC596F2003F9C99 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE91041D2CC83A2D003F9C99 /* Build configuration list for PBXNativeTarget "TestProjectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE91041E2CC83A2D003F9C99 /* Debug */,
+				CE91041F2CC83A2D003F9C99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

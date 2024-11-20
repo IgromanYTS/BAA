@@ -121,7 +121,7 @@ public class Database {
                 let columnName = String(command[columnRange])
                 
                 let variableRange = Range(match.range(at: 3), in: command)!
-                let variableName = String(command[variableRange]).trimmingCharacters(in: .whitespacesAndNewlines)
+                let variableName = String(command[variableRange]).trimmingCharacters(in: .whitespacesAndNewlines).replacingOccurrences(of: "\"", with: "")
                 
                 guard let indexColumn = table.columns.firstIndex(of: columnName) else {
                     print("Колонки \(columnName) не знайдена в таблиці \(tableName)")
@@ -129,7 +129,7 @@ public class Database {
                 }
                 
                 let fRows = table.rows.filter {
-                    row in return row[indexColumn].trimmingCharacters(in: .punctuationCharacters) == variableName
+                    row in return row[indexColumn].replacingOccurrences(of: "\"", with: "") < variableName
                 }
                 
                 for row in fRows {
@@ -245,7 +245,7 @@ public class Database {
                 let columnName2 = String(command[columnRange2])
                 
                 let variableRange2 = Range(match.range(at: 4), in: command)!
-                let variableName2 = String(command[variableRange2]).trimmingCharacters(in: .whitespacesAndNewlines)
+                let variableName2 = String(command[variableRange2]).trimmingCharacters(in: .whitespacesAndNewlines).replacingOccurrences(of: "\"", with: "")
                 
                 guard let indexColumn2 = table.columns.firstIndex(of: columnName2) else {
                     print("Колонки \(columnName2) не знайдена в таблиці \(tableName)")
@@ -253,7 +253,7 @@ public class Database {
                 }
                 
                 let fRows = table.rows.filter {
-                    row in return row[indexColumn2].trimmingCharacters(in: .punctuationCharacters) == variableName2
+                    row in return row[indexColumn2].replacingOccurrences(of: "\"", with: "") < variableName2
                 }
                 
                 let columnRange = Range(match.range(at: 5), in: command)!
